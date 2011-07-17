@@ -84,3 +84,5 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk2p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk3p1
 BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/mmcblk3p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk2p2
+
+TARGET_USES_GL_VENDOR_EXTENSIONS := true
