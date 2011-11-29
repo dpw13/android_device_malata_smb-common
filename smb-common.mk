@@ -3,7 +3,7 @@ $(call inherit-product, build/target/product/full_base.mk)
 # Get a proper init file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init_recovery.rc:root/init_recovery.rc \
-    $(LOCAL_PATH)/init.nvidia.rc:root/init.nvidia.rc
+    $(LOCAL_PATH)/init.nvidia.rc:root/init.nvidia.rc \
     $(LOCAL_PATH)/initlogo.rle:root/initlogo.rle
 
 # Place wifi files
@@ -35,12 +35,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     gralloc.default \
-    gralloc.tegra \
-    overlay.tegra \
-    lights.tegra \
-    sensors.tegra \
-    audiofix.malata-smb \
     screencap
+
+#    gralloc.tegra \
+#    overlay.tegra \
+#    lights.tegra \
+#    sensors.tegra \
+#    audiofix.malata-smb \
 
 # Use MDPI artwork
 PRODUCT_LOCALES += mdpi
