@@ -28,10 +28,10 @@ TARGET_NO_RADIOIMAGE := true
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
-BOARD_WLAN_DEVICE           := wlan0
+BOARD_WLAN_DEVICE           := eth0
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/hw/wlan/bcm4329.ko"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/lib/hw/wlan/fw_bcm4329.bin nvram_path=/system/lib/hw/wlan/nvram.txt"
-WIFI_DRIVER_MODULE_NAME     := "dhd"
+WIFI_DRIVER_MODULE_NAME     := "bcm4329"
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_CSR := true
@@ -77,13 +77,13 @@ BOARD_HAS_SDCARD_INTERNAL := true
 # This is for the Samsung Galaxy S.
 # Feel free to tweak or remove this code.
 # If you want to add/tweak a mount point, the BOARD_X_FILESYSTEM_OPTIONS are optional.
-BOARD_DATA_DEVICE := /dev/block/mmcblk3p2
+BOARD_DATA_DEVICE := /dev/block/mmcblk0p2
 BOARD_DATA_FILESYSTEM := ext3
 BOARD_CACHE_DEVICE := /dev/block/mtdblock4
 BOARD_CACHE_FILESYSTEM := yaffs2
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk2p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk3p1
-BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/mmcblk3p1
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p1
+BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/mmcblk0p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk2p2
 
 TARGET_USES_GL_VENDOR_EXTENSIONS := true
