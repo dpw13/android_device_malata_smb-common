@@ -3,8 +3,11 @@ $(call inherit-product, build/target/product/full_base.mk)
 # Get a proper init file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init_recovery.rc:root/init_recovery.rc \
-    $(LOCAL_PATH)/init.nvidia.rc:root/init.nvidia.rc \
+    $(LOCAL_PATH)/init.rc:root/init.rc \
     $(LOCAL_PATH)/initlogo.rle:root/initlogo.rle
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init.local.rc:system/etc/init.local.rc
 
 # Place wifi files
 PRODUCT_COPY_FILES += \
@@ -29,7 +32,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-#DEVICE_PACKAGE_OVERLAYS += device/malata/smb-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/malata/smb-common/overlay
 
 # Include packages
 PRODUCT_PACKAGES += \
