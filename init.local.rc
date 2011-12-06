@@ -1,0 +1,31 @@
+on fs
+    # nvrm permissions
+    chmod 666 /dev/nvrm
+
+    # knvrm permissions
+    chmod 660 /dev/knvrm
+    chown root system /dev/knvrm
+
+    # nvrpc permissions
+    chmod 666 /dev/tegra_rpc
+    symlink /dev/tegra_rpc /dev/nvrpc
+
+    # nvmap permissions
+    chmod 666 /dev/nvmap
+
+    # nvos permissions
+    chmod 666 /dev/nvos
+
+    # nvhost permissions
+    chmod 666 /dev/nvhost-ctrl
+    chmod 666 /dev/nvhost-display
+    chmod 666 /dev/nvhost-gr3d
+    chmod 666 /dev/nvhost-gr2d
+    chmod 666 /dev/nvhost-dsi
+    chmod 666 /dev/nvhost-isp
+    chmod 666 /dev/nvhost-mpe
+    chmod 666 /dev/nvhost-vi
+
+service nvrm_daemon /system/bin/nvrm_daemon
+    user root
+    onrestart restart servicemanager
